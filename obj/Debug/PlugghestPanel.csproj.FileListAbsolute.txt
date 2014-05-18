@@ -1,0 +1,5 @@
+C:\websites\dnndev.me\bin\PlugghestPanel.dll
+C:\websites\dnndev.me\bin\PlugghestPanel.pdb
+C:\websites\dnndev.me\DesktopModules\PlugghestPanel\obj\Debug\PlugghestPanel.csprojResolveAssemblyReference.cache
+C:\websites\dnndev.me\DesktopModules\PlugghestPanel\obj\Debug\PlugghestPanel.dll
+C:\websites\dnndev.me\DesktopModules\PlugghestPanel\obj\Debug\PlugghestPanel.pdb
