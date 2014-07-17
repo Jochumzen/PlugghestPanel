@@ -3,3 +3,4 @@ C:\websites\dnndev.me\bin\PlugghestPanel.dll
 C:\websites\dnndev.me\bin\PlugghestPanel.pdb
 C:\websites\dnndev.me\DesktopModules\PlugghestPanel\obj\Release\PlugghestPanel.dll
 C:\websites\dnndev.me\DesktopModules\PlugghestPanel\obj\Release\PlugghestPanel.pdb
+C:\websites\dnndev.me\bin\PlugghestPanel.dll.config

@@ -27,6 +27,7 @@ using Plugghest.Base2;
 using Plugghest.DNN;
 using System.IO;
 using Ionic.Zip;
+using DotNetNuke.Entities.Modules.Definitions;
 
 namespace Plugghest.Modules.PlugghestPanel
 {
@@ -65,7 +66,6 @@ namespace Plugghest.Modules.PlugghestPanel
         protected void btnDeleteTab_Click(object sender, EventArgs e)
         {
             DNNHelper h = new DNNHelper();
-            TabInfo t;
             string s = tbDeleteTabID.Text;
 
 
@@ -75,9 +75,7 @@ namespace Plugghest.Modules.PlugghestPanel
 
                 for (int i = 0; i < tabIDs.Length; i++)
                 {
-                    t = new TabInfo();
-                    t.TabID = Convert.ToInt32(tabIDs[i]);
-                    h.DeleteTab(t);
+                    h.DeleteTab(Convert.ToInt32(tabIDs[i]));
                 }
             }
             else
@@ -91,16 +89,12 @@ namespace Plugghest.Modules.PlugghestPanel
                     int endint = Convert.ToInt32(ends);
                     for (int tID = startint; tID <= endint; tID++)
                     {
-                        t = new TabInfo();
-                        t.TabID = tID;
-                        h.DeleteTab(t);
+                        h.DeleteTab(tID);
                     }
                 }
                 else
                 {
-                    t = new TabInfo();
-                    t.TabID = Convert.ToInt32(s);
-                    h.DeleteTab(t);
+                    h.DeleteTab(Convert.ToInt32(s));
                 }
             }
             tbDeleteTabID.Text = "";
@@ -108,7 +102,7 @@ namespace Plugghest.Modules.PlugghestPanel
 
         protected void btnDeleteAllPluggs_Click(object sender, EventArgs e)
         {
-            //BaseHandler bh = new BaseHandler();
+            BaseHandler bh = new BaseHandler();
             //bh.DeleteAllPluggs();
         }
 
@@ -357,6 +351,31 @@ namespace Plugghest.Modules.PlugghestPanel
             //            break;
             //    }
             //}
+        }
+
+        protected void btnDeletePlugg_Click(object sender, EventArgs e)
+        {
+            BaseHandler bh = new BaseHandler();
+            PluggContainer pc = new PluggContainer("en-us",Convert.ToInt32(tbDeletePlugg.Text));
+            bh.DeletePlugg(pc.ThePlugg);
+        }
+
+        protected void btnAddModule_Click(object sender, EventArgs e)
+        {
+            string DesktopModuleFriendlyName = "DNNDal2";
+            ModuleDefinitionInfo moduleDefinitionInfo = new ModuleDefinitionInfo();
+            ModuleInfo moduleInfo = new ModuleInfo();
+            moduleInfo.PortalID = 0;
+            moduleInfo.TabID = 150;
+            moduleInfo.PaneName = "TopPane";
+            moduleInfo.ModuleDefID = 160;
+            moduleInfo.CacheTime = moduleDefinitionInfo.DefaultCacheTime;//Default Cache Time is 0
+            moduleInfo.InheritViewPermissions = true;  //Inherit View Permissions from Tab
+            moduleInfo.AllTabs = false;
+            moduleInfo.Alignment = "Top";
+
+            ModuleController moduleController = new ModuleController();
+            int moduleId = moduleController.AddModule(moduleInfo);
         }
 
     }

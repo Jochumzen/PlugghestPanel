@@ -76,6 +76,24 @@ namespace Plugghest.Modules.PlugghestPanel {
         protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
+        /// tbDeletePlugg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbDeletePlugg;
+        
+        /// <summary>
+        /// btnDeletePlugg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDeletePlugg;
+        
+        /// <summary>
         /// btnDeleteAllPluggs control.
         /// </summary>
         /// <remarks>
@@ -119,6 +137,24 @@ namespace Plugghest.Modules.PlugghestPanel {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDeleteTab;
+        
+        /// <summary>
+        /// tbAddModule control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbAddModule;
+        
+        /// <summary>
+        /// btnAddModule control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddModule;
         
         /// <summary>
         /// btnDeleteCourses control.
